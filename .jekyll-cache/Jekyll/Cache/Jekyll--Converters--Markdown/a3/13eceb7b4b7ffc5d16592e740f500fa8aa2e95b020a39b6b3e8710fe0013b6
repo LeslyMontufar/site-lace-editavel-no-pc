@@ -1,0 +1,36 @@
+I"�<p>这是一个完整的 mvnrepository.com 代理，你可以用此代替官方版本，并且可以下载 Boyuan 的 Java 组件</p>
+
+<ul>
+  <li>Nexus 首页: <a href="http://180.167.77.60:30001">http://180.167.77.60:30001</a></li>
+  <li>Maven Public: http://180.167.77.60:30001/repository/maven-public</li>
+</ul>
+
+<h2 id="maven">Maven</h2>
+
+<h4 id="在-pom-中配置-nexus-仓库">在 POM 中配置 Nexus 仓库</h4>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+    ...
+    <span class="nt">&lt;repositories&gt;</span>
+        <span class="nt">&lt;repository&gt;</span>
+            <span class="nt">&lt;id&gt;</span>nexus<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;name&gt;</span>Nexus<span class="nt">&lt;/name&gt;</span>
+            <span class="nt">&lt;url&gt;</span>http://180.167.77.60:30001/repository/maven-public<span class="nt">&lt;/url&gt;</span>
+            <span class="nt">&lt;releases&gt;&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;&lt;/releases&gt;</span>
+            <span class="nt">&lt;snapshots&gt;&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;&lt;/snapshots&gt;</span>
+        <span class="nt">&lt;/repository&gt;</span>
+    <span class="nt">&lt;/repositories&gt;</span>
+
+    <span class="nt">&lt;pluginRepositories&gt;</span>
+        <span class="nt">&lt;pluginRepository&gt;</span>
+            <span class="nt">&lt;id&gt;</span>nexus<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;name&gt;</span>Nexus<span class="nt">&lt;/name&gt;</span>
+            <span class="nt">&lt;url&gt;</span>http://180.167.77.60:30001/repository/maven-public<span class="nt">&lt;/url&gt;</span>
+            <span class="nt">&lt;releases&gt;&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;&lt;/releases&gt;</span>
+            <span class="nt">&lt;snapshots&gt;&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;&lt;/snapshots&gt;</span>
+        <span class="nt">&lt;/pluginRepository&gt;</span>
+    <span class="nt">&lt;/pluginRepositories&gt;</span>
+    ...
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+:ET
